@@ -20,12 +20,16 @@ int main() {
     //distinct seeds plus time for obscurity
     srand(getpid() + time(NULL));
     int sleep_amount = rand() % 16 + 4;
-    printf("sleep time: %d\n", sleep_amount);
-    printf("child released\n");
+    sleep(sleep_amount);
+    printf("child done napping\n");
+    return sleep_amount;
   }
 
   else {
-    printf("completed pid: %d\n", (int) wait(&status);
+    printf("completed child process pid: %d\n",  wait(&status));
+    printf("Slept for: %d s\n", WEXITSTATUS(status));
+	      
+	   
   }
-  return 0;
+  
 }
