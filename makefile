@@ -1,4 +1,4 @@
 all: daycare.c
-	gcc daycare.c
-run: ./a.out
-	./a.out
+	gcc -o daycare daycare.c
+run: all
+	./daycare

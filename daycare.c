@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
+#include <sys/wait.h>
 
 int main() {
 
@@ -28,7 +29,7 @@ int main() {
   else {
     printf("completed child process pid: %d\n",  wait(&status));
     printf("Slept for: %d s\n", WEXITSTATUS(status));
-	      
+    printf("Parent completed\n");
 	   
   }
   
